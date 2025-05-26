@@ -1,0 +1,94 @@
+<svg fill="none" viewBox="0 0 846 150" width="846" height="150" xmlns="http://www.w3.org/2000/svg">
+	<foreignObject width="100%" height="100%">
+		<div xmlns="http://www.w3.org/1999/xhtml">
+			<style>
+				.container {
+					font-family: 'Noto Sans JP', 'Press Start 2P', system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, 'Noto Sans', sans-serif;
+					display: flex;
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					margin: 0;
+					width: 100%;
+					height: 150px;
+					background: linear-gradient(to right, #000000, #380d35);
+					border-radius: 10px;
+					color: white;
+					text-align: center;
+					position: relative;
+					overflow: hidden;
+				}
+				.sakura {
+					position: absolute;
+					height: 100%;
+					width: 100%;
+					opacity: 0.3;
+					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='%23ff6bcb' d='M6,0 C6,0 6.9,2.1 6,4 C7.9,4.9 10,4 10,4 C10,4 7.9,4.9 6,6 C6.9,7.9 6,10 6,10 C6,10 5.1,7.9 4,6 C2.1,5.1 0,6 0,6 C0,6 2.1,5.1 4,4 C3.1,2.1 4,0 4,0 C4,0 4.9,2.1 6,0 Z'/%3E%3C/svg%3E");
+					background-size: 24px 24px;
+					animation: sakuraFall 20s linear infinite;
+				}
+				@keyframes sakuraFall {
+					0% { background-position: 0px -100px; }
+					100% { background-position: 100px 250px; }
+				}
+				.name {
+					font-size: 32px;
+					font-weight: 700;
+					margin-bottom: 8px;
+					background: -webkit-linear-gradient(#ff99cc, #ff3366);
+					-webkit-background-clip: text;
+					-webkit-text-fill-color: transparent;
+					text-shadow: 0 0 5px rgba(255, 153, 204, 0.5), 0 0 10px rgba(255, 51, 102, 0.5);
+					position: relative;
+					padding-bottom: 8px;
+					z-index: 2;
+				}
+				.name::after {
+					content: "";
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					right: 0;
+					height: 2px;
+					background: linear-gradient(90deg, transparent, #ff3366, #ff99cc, #ff3366, transparent);
+				}
+				.title {
+					font-size: 18px;
+					color: #ffffff;
+					margin-top: 4px;
+					font-weight: 400;
+					letter-spacing: 2px;
+					text-shadow: 0 0 5px #ff3366;
+					z-index: 2;
+					position: relative;
+				}
+				.pixel-art {
+					font-size: 12px;
+					margin-top: 10px;
+					color: #99ffff;
+					text-shadow: 0 0 4px #00cccc;
+					font-family: 'Noto Sans JP', monospace;
+					z-index: 2;
+					position: relative;
+				}
+				.kanji {
+					position: absolute;
+					font-family: 'Noto Serif JP', serif;
+					color: rgba(255, 255, 255, 0.05);
+					font-size: 100px;
+					z-index: 1;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			</style>
+			<div class="container">
+				<div class="sakura"></div>
+				<div class="kanji">コード</div>
+				<div class="name">YOUR NAME</div>
+				<div class="title">アニメとピクセルアートの開発者</div>
+				<div class="pixel-art">[ アニメ • ピクセルアート • コード ]</div>
+			</div>
+		</div>
+	</foreignObject>
+</svg> 
