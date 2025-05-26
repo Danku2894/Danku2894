@@ -1,7 +1,7 @@
 <svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
   <!-- Background with Animated Gradient -->
   <defs>
-    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%" gradientTransform="rotate(0)">
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
       <stop offset="0%" stop-color="#1a0e23">
         <animate attributeName="stop-color" values="#1a0e23; #3a1f53; #1a0e23" dur="10s" repeatCount="indefinite" />
       </stop>
@@ -10,81 +10,87 @@
       </stop>
     </linearGradient>
     
-    <!-- Animated Mask for Neon Glow -->
+    <!-- Glow Filter -->
     <filter id="glow">
       <feGaussianBlur stdDeviation="2.5" result="blur" />
       <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
+    
+    <!-- Cherry Blossom Pattern -->
+    <pattern id="sakura-pattern" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M20,0 C20,0 23,7 20,13 C26,16 33,13 33,13 C33,13 26,16 20,20 C23,26 20,33 20,33 C20,33 17,26 13,20 C7,23 0,20 0,20 C0,20 7,17 13,13 C10,7 13,0 13,0 C13,0 16,7 20,0 Z" 
+            fill="#ff6bcb" opacity="0.2" transform="translate(3.5,3.5)"/>
+    </pattern>
   </defs>
   
   <!-- Background -->
-  <rect width="200" height="200" fill="url(#bg-gradient)">
-    <animateTransform attributeName="gradientTransform" 
-                      type="rotate" 
-                      from="0 0.5 0.5" 
-                      to="360 0.5 0.5" 
-                      dur="20s" 
-                      repeatCount="indefinite" />
+  <rect width="200" height="200" fill="url(#bg-gradient)"/>
+  
+  <!-- Sakura Pattern Overlay -->
+  <rect width="200" height="200" fill="url(#sakura-pattern)" opacity="0.3">
+    <animate attributeName="opacity" values="0.2;0.4;0.2" dur="10s" repeatCount="indefinite" />
   </rect>
   
-  <!-- Grid Pattern -->
-  <path d="M0,0 L200,0 L200,200 L0,200 Z" fill="none" stroke="#ff66cc22" stroke-width="0.5" stroke-dasharray="4,4" />
-  <path d="M0,40 L200,40 M0,80 L200,80 M0,120 L200,120 M0,160 L200,160 M40,0 L40,200 M80,0 L80,200 M120,0 L120,200 M160,0 L160,200" 
-        stroke="#ff66cc11" stroke-width="0.5" />
-  
-  <!-- Anime Character - Japanese Style -->
-  <!-- Head -->
-  <rect x="80" y="40" width="40" height="40" fill="#ffe6e6">
-    <animate attributeName="fill" values="#ffe6e6;#ffdbac;#ffe6e6" dur="5s" repeatCount="indefinite" />
-  </rect>
-  
-  <!-- Hair -->
-  <rect x="70" y="30" width="60" height="20" fill="#202060" />
-  <rect x="70" y="30" width="10" height="40" fill="#202060" />
-  <rect x="130" y="30" width="10" height="30" fill="#202060" />
-  <rect x="70" y="50" width="10" height="10" fill="#202060" />
-  <rect x="130" y="50" width="10" height="10" fill="#202060" />
-  <rect x="80" y="30" width="10" height="10" fill="#202060" />
-  <rect x="120" y="30" width="10" height="10" fill="#202060" />
-  
-  <!-- Eyes - Anime Style -->
-  <rect x="85" y="50" width="10" height="8" fill="#ffffff" />
-  <rect x="105" y="50" width="10" height="8" fill="#ffffff" />
-  <rect x="87" y="52" width="6" height="6" fill="#6644cc">
-    <animate attributeName="fill" values="#6644cc;#9966ff;#6644cc" dur="3s" repeatCount="indefinite" />
-  </rect>
-  <rect x="107" y="52" width="6" height="6" fill="#6644cc">
-    <animate attributeName="fill" values="#6644cc;#9966ff;#6644cc" dur="3s" repeatCount="indefinite" />
-  </rect>
-  <rect x="90" y="50" width="2" height="2" fill="#ffffff" />
-  <rect x="110" y="50" width="2" height="2" fill="#ffffff" />
-  
-  <!-- Blush -->
-  <rect x="75" y="60" width="6" height="3" fill="#ff99cc" opacity="0.6" />
-  <rect x="119" y="60" width="6" height="3" fill="#ff99cc" opacity="0.6" />
-  
-  <!-- Mouth -->
-  <rect x="95" y="65" width="10" height="3" fill="#ff6699" />
-  
-  <!-- Japanese School Uniform -->
-  <!-- Body - Seifuku (School Uniform) -->
-  <rect x="85" y="80" width="30" height="30" fill="#3a1f53" />
-  <!-- Sailor Collar -->
-  <rect x="85" y="80" width="30" height="8" fill="#ffffff" />
-  <rect x="87" y="88" width="26" height="2" fill="#ff3366" />
-  
-  <!-- Arms -->
-  <rect x="75" y="80" width="10" height="20" fill="#3a1f53" />
-  <rect x="115" y="80" width="10" height="20" fill="#3a1f53" />
-  <rect x="75" y="100" width="10" height="5" fill="#ffe6e6" />
-  <rect x="115" y="100" width="10" height="5" fill="#ffe6e6" />
-  
-  <!-- Legs -->
-  <rect x="90" y="110" width="8" height="20" fill="#3a1f53" />
-  <rect x="102" y="110" width="8" height="20" fill="#3a1f53" />
-  <!-- Shoes -->
-  <rect x="90" y="130" width="8" height="5" fill="#202060" />
-  <rect x="102" y="130" width="8" height="5" fill="#202060" />
+  <!-- Anime Character - Modern Japanese Style -->
+  <g id="anime-character">
+    <!-- Face -->
+    <ellipse cx="100" cy="85" rx="35" ry="40" fill="#ffe6e6"/>
+    
+    <!-- Hair -->
+    <path d="M65,85 Q65,45 100,45 Q135,45 135,85 L135,95 Q130,100 125,95 L125,85 Q125,55 100,55 Q75,55 75,85 L75,95 Q70,100 65,95 Z" 
+          fill="#202060"/>
+    <!-- Hair Side Pieces -->
+    <path d="M65,85 L65,110 Q65,120 75,120 L75,100 L75,85 Z" fill="#202060"/>
+    <path d="M135,85 L135,110 Q135,120 125,120 L125,100 L125,85 Z" fill="#202060"/>
+    
+    <!-- Eyes -->
+    <g id="eyes">
+      <!-- Left Eye -->
+      <ellipse cx="85" cy="80" rx="8" ry="10" fill="#ffffff"/>
+      <ellipse cx="85" cy="80" rx="5" ry="7" fill="#6644cc">
+        <animate attributeName="rx" values="5;4;5" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="7;6;7" dur="3s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="83" cy="77" rx="2" ry="2" fill="#ffffff"/>
+      <!-- Right Eye -->
+      <ellipse cx="115" cy="80" rx="8" ry="10" fill="#ffffff"/>
+      <ellipse cx="115" cy="80" rx="5" ry="7" fill="#6644cc">
+        <animate attributeName="rx" values="5;4;5" dur="3s" repeatCount="indefinite"/>
+        <animate attributeName="ry" values="7;6;7" dur="3s" repeatCount="indefinite"/>
+      </ellipse>
+      <ellipse cx="113" cy="77" rx="2" ry="2" fill="#ffffff"/>
+      <!-- Eyelashes -->
+      <path d="M77,73 L73,70 M85,70 L85,65 M93,73 L97,70" stroke="#202060" stroke-width="1.5"/>
+      <path d="M107,73 L103,70 M115,70 L115,65 M123,73 L127,70" stroke="#202060" stroke-width="1.5"/>
+    </g>
+    
+    <!-- Blush -->
+    <ellipse cx="75" cy="92" rx="7" ry="4" fill="#ff99cc" opacity="0.6"/>
+    <ellipse cx="125" cy="92" rx="7" ry="4" fill="#ff99cc" opacity="0.6"/>
+    
+    <!-- Mouth -->
+    <path d="M95,100 Q100,105 105,100" stroke="#ff6699" stroke-width="2" fill="none"/>
+    
+    <!-- Japanese School Uniform -->
+    <!-- Neck -->
+    <path d="M90,110 L90,125 L110,125 L110,110" fill="#ffe6e6"/>
+    
+    <!-- Uniform Body -->
+    <path d="M70,130 Q70,170 85,180 L115,180 Q130,170 130,130 L130,125 Q120,130 100,130 Q80,130 70,125 Z" fill="#3a1f53"/>
+    
+    <!-- Sailor Collar -->
+    <path d="M70,130 L130,130 L130,140 L70,140 Z" fill="#ffffff"/>
+    <path d="M72,140 L128,140 L128,143 L72,143 Z" fill="#ff3366"/>
+    
+    <!-- Necktie -->
+    <path d="M95,130 L105,130 L105,145 L100,155 L95,145 Z" fill="#ff3366"/>
+    
+    <!-- Arms -->
+    <path d="M70,130 L60,150 Q60,160 65,165 L70,165 Q75,160 75,150 Z" fill="#3a1f53"/>
+    <path d="M130,130 L140,150 Q140,160 135,165 L130,165 Q125,160 125,150 Z" fill="#3a1f53"/>
+    <ellipse cx="65" cy="165" rx="5" ry="5" fill="#ffe6e6"/>
+    <ellipse cx="135" cy="165" rx="5" ry="5" fill="#ffe6e6"/>
+  </g>
   
   <!-- Neon Glow Elements -->
   <circle cx="100" cy="100" r="75" fill="none" stroke="#ff3366" stroke-width="0.5" opacity="0.2">
@@ -96,13 +102,29 @@
   <text x="140" y="35" font-family="'Noto Serif JP', serif" font-size="14" fill="#ff336633">漫画</text>
   <text x="40" y="165" font-family="'Noto Serif JP', serif" font-size="14" fill="#ff336633">アニメ</text>
   
-  <!-- Floating Pixel -->
-  <rect x="70" y="40" width="2" height="2" fill="#ff3366">
-    <animate attributeName="y" values="40;35;40" dur="2s" repeatCount="indefinite" />
-    <animate attributeName="opacity" values="1;0.5;1" dur="2s" repeatCount="indefinite" />
-  </rect>
-  <rect x="130" y="60" width="2" height="2" fill="#ff3366">
-    <animate attributeName="y" values="60;55;60" dur="3s" repeatCount="indefinite" />
-    <animate attributeName="opacity" values="1;0.5;1" dur="3s" repeatCount="indefinite" />
-  </rect>
+  <!-- Floating Elements -->
+  <g id="floating-elements">
+    <!-- Cherry Blossom Petals -->
+    <path d="M20,15 C20,15 23,22 20,28 C26,31 33,28 33,28 C33,28 26,31 20,35 C23,41 20,48 20,48 C20,48 17,41 13,35 C7,38 0,35 0,35 C0,35 7,32 13,28 C10,22 13,15 13,15 C13,15 16,22 20,15 Z" 
+          fill="#ff6bcb" opacity="0.6" transform="scale(0.4)">
+      <animateTransform attributeName="transform" 
+                        type="translate" 
+                        from="0 0" 
+                        to="180 180" 
+                        dur="15s" 
+                        repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.6;0.3;0.6" dur="15s" repeatCount="indefinite"/>
+    </path>
+    
+    <path d="M20,15 C20,15 23,22 20,28 C26,31 33,28 33,28 C33,28 26,31 20,35 C23,41 20,48 20,48 C20,48 17,41 13,35 C7,38 0,35 0,35 C0,35 7,32 13,28 C10,22 13,15 13,15 C13,15 16,22 20,15 Z" 
+          fill="#ff6bcb" opacity="0.4" transform="scale(0.3)">
+      <animateTransform attributeName="transform" 
+                        type="translate" 
+                        from="150 10" 
+                        to="50 190" 
+                        dur="20s" 
+                        repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.4;0.2;0.4" dur="20s" repeatCount="indefinite"/>
+    </path>
+  </g>
 </svg> 
