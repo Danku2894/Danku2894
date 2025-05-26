@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="images/Animation - 1748275949029.gif" width="200" height="200" alt="Anime Avatar"/>
+  <img src="svg/japanese-avatar.svg" width="200" height="200" alt="Japanese Avatar"/>
 </div>
 
 <div align="center">
@@ -7,7 +7,7 @@
 </div>
 
 <div align="center">
-  <img src="svg/pixel-quote.svg" alt="Quote"/>
+  <img src="svg/japanese-quote.svg" alt="Japanese Quote"/>
 </div>
 
 <br>
@@ -26,7 +26,7 @@
 
 <br>
 
-## 🛠️ Công nghệ và Công cụ 🛠️
+## 🛠️ 技術とツール 🛠️
 
 <div align="center">
   <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="JavaScript" />
@@ -50,16 +50,16 @@
 
 <br>
 
-## 🧑‍💻 Về tôi
+## 🧑‍💻 プロフィール
 
-- 🚀 Full Stack Developer với đam mê phát triển các ứng dụng web hiện đại
-- 🔍 Chuyên về MERN Stack (MongoDB, Express.js, React, Node.js)
-- 🌐 Đam mê tạo ra trải nghiệm người dùng mượt mà và trực quan
-- 💼 Luôn tìm kiếm cơ hội để học hỏi và phát triển kỹ năng
+- 🚀 モダンなウェブアプリケーションの開発に情熱を持つフルスタック開発者
+- 🔍 MERN スタック（MongoDB、Express.js、React、Node.js）専門
+- 🌐 スムーズで直感的なユーザー体験の創造に情熱を持つ
+- 💼 学び、スキルを向上させる機会を常に探している
 
 <br>
 
-## 📊 Thống kê GitHub 📊
+## 📊 GitHub 統計 📊
 
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api?username=Danku2894&show_icons=true&theme=tokyonight&hide_border=true" alt="GitHub Stats" />
@@ -72,12 +72,12 @@
 
 <br>
 
-## 📑 Châm ngôn yêu thích 📑
+## 📑 好きな言葉 📑
 
 <div align="center">
   <img width="500" src="https://img.shields.io/badge/%E3%80%8C%E5%8A%AA%E5%8A%9B%E3%81%AF%E5%BF%85%E3%81%9A%E5%A0%B1%E3%82%8F%E3%82%8C%E3%82%8B%E3%80%8D-311B5E?style=for-the-badge&logoColor=white" alt="Favorite Quote" />
 </div>
 <div align="center">
-  <i>"Nỗ lực luôn được đền đáp xứng đáng"</i>
+  <i>"努力は必ず報われる"</i>
 </div>
 
