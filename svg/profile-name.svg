@@ -1,212 +1,75 @@
 <svg fill="none" viewBox="0 0 846 150" width="846" height="150" xmlns="http://www.w3.org/2000/svg">
-	<foreignObject width="100%" height="100%">
-		<div xmlns="http://www.w3.org/1999/xhtml">
-			<style>
-				@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap');
-				
-				.container {
-					font-family: 'Noto Sans JP', system-ui, -apple-system, 'Segoe UI', Roboto, Ubuntu, Cantarell, sans-serif;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-					justify-content: center;
-					margin: 0;
-					width: 100%;
-					height: 150px;
-					background: linear-gradient(135deg, #1a0e23, #3a1f53);
-					border-radius: 10px;
-					color: white;
-					text-align: center;
-					position: relative;
-					overflow: hidden;
-				}
-				
-				.bg-pattern {
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					background-image: 
-						linear-gradient(135deg, rgba(255,255,255,0.05) 25%, transparent 25%),
-						linear-gradient(225deg, rgba(255,255,255,0.05) 25%, transparent 25%),
-						linear-gradient(315deg, rgba(255,255,255,0.05) 25%, transparent 25%),
-						linear-gradient(45deg, rgba(255,255,255,0.05) 25%, transparent 25%);
-					background-size: 30px 30px;
-					opacity: 0.3;
-				}
-				
-				.sakura-container {
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 100%;
-					height: 100%;
-					pointer-events: none;
-					overflow: hidden;
-				}
-				
-				.sakura {
-					position: absolute;
-					background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3E%3Cpath fill='%23ff6bcb' d='M6,0 C6,0 6.9,2.1 6,4 C7.9,4.9 10,4 10,4 C10,4 7.9,4.9 6,6 C6.9,7.9 6,10 6,10 C6,10 5.1,7.9 4,6 C2.1,5.1 0,6 0,6 C0,6 2.1,5.1 4,4 C3.1,2.1 4,0 4,0 C4,0 4.9,2.1 6,0 Z'/%3E%3C/svg%3E");
-					background-size: 100% 100%;
-					opacity: 0;
-					animation: fall 10s linear infinite;
-				}
-				
-				.sakura:nth-child(1) {
-					left: 10%;
-					width: 20px;
-					height: 20px;
-					animation-delay: 0s;
-					animation-duration: 10s;
-				}
-				
-				.sakura:nth-child(2) {
-					left: 30%;
-					width: 16px;
-					height: 16px;
-					animation-delay: 2s;
-					animation-duration: 12s;
-				}
-				
-				.sakura:nth-child(3) {
-					left: 50%;
-					width: 24px;
-					height: 24px;
-					animation-delay: 4s;
-					animation-duration: 8s;
-				}
-				
-				.sakura:nth-child(4) {
-					left: 70%;
-					width: 18px;
-					height: 18px;
-					animation-delay: 6s;
-					animation-duration: 15s;
-				}
-				
-				.sakura:nth-child(5) {
-					left: 90%;
-					width: 22px;
-					height: 22px;
-					animation-delay: 8s;
-					animation-duration: 9s;
-				}
-				
-				@keyframes fall {
-					0% {
-						top: -10%;
-						transform: translateX(0) rotate(0deg);
-						opacity: 0;
-					}
-					10% {
-						opacity: 0.8;
-					}
-					90% {
-						opacity: 0.8;
-					}
-					100% {
-						top: 110%;
-						transform: translateX(20px) rotate(360deg);
-						opacity: 0;
-					}
-				}
-				
-				.content {
-					position: relative;
-					z-index: 2;
-				}
-				
-				.name {
-					font-family: 'Noto Serif JP', serif;
-					font-size: 36px;
-					font-weight: 700;
-					margin-bottom: 8px;
-					background: linear-gradient(to right, #ff99cc, #ff3366);
-					-webkit-background-clip: text;
-					-webkit-text-fill-color: transparent;
-					text-shadow: 0 0 20px rgba(255, 51, 102, 0.3);
-					position: relative;
-					display: inline-block;
-					letter-spacing: 2px;
-				}
-				
-				.name::after {
-					content: "";
-					position: absolute;
-					bottom: -3px;
-					left: 0;
-					right: 0;
-					height: 1px;
-					background: linear-gradient(90deg, transparent, #ff3366, #ff99cc, #ff3366, transparent);
-				}
-				
-				.title {
-					font-size: 18px;
-					color: #ffffff;
-					margin-top: 8px;
-					font-weight: 300;
-					letter-spacing: 3px;
-					text-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
-				}
-				
-				.subtitle {
-					font-size: 14px;
-					margin-top: 12px;
-					color: #99ffff;
-					text-shadow: 0 0 8px rgba(0, 204, 204, 0.5);
-					font-weight: 400;
-					letter-spacing: 1px;
-				}
-				
-				.kanji-bg {
-					position: absolute;
-					font-family: 'Noto Serif JP', serif;
-					color: rgba(255, 255, 255, 0.03);
-					font-size: 120px;
-					z-index: 1;
-					opacity: 0.5;
-					top: 50%;
-					left: 50%;
-					transform: translate(-50%, -50%);
-					letter-spacing: 20px;
-					white-space: nowrap;
-				}
-				
-				.glow {
-					position: absolute;
-					width: 100%;
-					height: 3px;
-					bottom: 0;
-					background: linear-gradient(90deg, transparent, #ff3366, #ff99cc, #ff3366, transparent);
-					animation: borderGlow 3s ease infinite;
-					background-size: 300% 300%;
-				}
-				
-				@keyframes borderGlow {
-					0% {background-position: 0% 50%}
-					50% {background-position: 100% 50%}
-					100% {background-position: 0% 50%}
-				}
-			</style>
-			<div class="container">
-				<div class="bg-pattern"></div>
-				<div class="sakura-container">
-					<div class="sakura"></div>
-					<div class="sakura"></div>
-					<div class="sakura"></div>
-					<div class="sakura"></div>
-					<div class="sakura"></div>
-				</div>
-				<div class="kanji-bg">夢想</div>
-				<div class="content">
-					<div class="name">Vo Le Quoc Dat</div>
-					<div class="title">アニメと日本文化の開発者</div>
-					<div class="subtitle">[ アニメ • 文化 • デザイン ]</div>
-				</div>
-				<div class="glow"></div>
-			</div>
-		</div>
-	</foreignObject>
+	<style>
+		@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;700&display=swap');
+		
+		.container {
+			font-family: sans-serif;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 150px;
+			background: linear-gradient(135deg, #1a0e23, #3a1f53);
+		}
+		
+		.content {
+			text-align: center;
+		}
+		
+		.name {
+			font-size: 40px;
+			font-weight: 700;
+			fill: #ff99cc;
+			filter: drop-shadow(0px 0px 3px #ff3366);
+		}
+		
+		.title {
+			font-size: 20px;
+			fill: #ffffff;
+			font-weight: 300;
+		}
+		
+		.subtitle {
+			font-size: 16px;
+			fill: #99ffff;
+			font-weight: 400;
+		}
+		
+		.kanji-bg {
+			fill: rgba(255, 255, 255, 0.08);
+			font-size: 100px;
+			font-family: serif;
+			text-anchor: middle;
+		}
+		
+		.glow {
+			stroke: url(#gradient);
+			stroke-width: 2;
+			fill: none;
+		}
+	</style>
+	
+	<defs>
+		<linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
+			<stop offset="0%" stop-color="#ff3366" />
+			<stop offset="50%" stop-color="#ff99cc" />
+			<stop offset="100%" stop-color="#ff3366" />
+		</linearGradient>
+	</defs>
+	
+	<rect width="846" height="150" fill="url(#gradient)" opacity="0.05" />
+	<rect width="846" height="150" fill="url(#gradient)" fill-opacity="0.05" />
+	
+	<rect x="0" y="0" width="846" height="150" rx="10" fill="url(#gradient)" fill-opacity="0" stroke="url(#gradient)" stroke-width="2" />
+	
+	<text x="423" y="65" class="kanji-bg" dominant-baseline="middle">夢想</text>
+	
+	<g class="content">
+		<text x="423" y="65" class="name" text-anchor="middle">Vo Le Quoc Dat</text>
+		<text x="423" y="100" class="title" text-anchor="middle">Full Stack Developer</text>
+		<text x="423" y="125" class="subtitle" text-anchor="middle">MERN Stack • Web Development • UI/UX</text>
+	</g>
+	
+	<rect x="173" y="145" width="500" height="3" fill="url(#gradient)" />
 </svg> 
