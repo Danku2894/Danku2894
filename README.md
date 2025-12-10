@@ -16,7 +16,7 @@
   <a href="https://www.facebook.com/danku.2894">
     <img src="https://img.shields.io/badge/Facebook-%231877F2.svg?&style=for-the-badge&logo=Facebook&logoColor=white" alt="Facebook Badge"/>
   </a>
-  <a href="https://www.instagram.com/danku.2894">
+  <a href="https://www.instagram.com/_d4nku">
     <img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?&style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram Badge"/>
   </a>
   <a href="mailto:vodat.lmtc@gmail.com">
