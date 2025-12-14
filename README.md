@@ -5,7 +5,7 @@
 <!-- ═══════════════════════════════════════════════════════════════════════════════ -->
 
 <div align="center">
-  <img src="assets/Black Pixel Art Outer Space Video.svg" alt="Space Banner" width="100%"/>
+  <img src="svg/Black Pixel Art Outer Space Video.svg" alt="Space Banner" width="100%"/>
 </div>
 
 <br>
